@@ -1,3 +1,4 @@
+/* GLOBAL SETTINGS */
 * {
   margin: 0;
   padding: 0;
@@ -6,20 +7,18 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  background-color: whitesmoke;
+  color: #222;
 }
 
+/* HERO SECTION */
 .hero-section {
   position: relative;
   width: 1440px;
-  height: 700px;
+  margin: 40px auto;
+  height: 824px;
   background-color: #222;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
   overflow: hidden;
 }
 
@@ -33,70 +32,75 @@ body {
   z-index: 0;
 }
 
+/* NAVBAR */
 .navbar {
   position: absolute;
-  top: 12px;
-  left: 22px;
-  width: 1385px;
-  height: 85px;
-  padding: 0 40px;
+  top: 24px;
+  left: 0;
   z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
 }
 
 .nav-container {
+  width: 1385px;
+  height: 85px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  padding: 0 40px;
 }
 
 .logo {
   width: 114px;
   height: 85px;
-  top: 12px;
-  left: 22px;
 }
 
 .menu {
   display: flex;
-  gap: 46px; 
-  
+  gap: 46px;
 }
 
 .menu a {
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
+  font-weight: 500;
+  width: 71px;
+  height: 24px;
 }
 
 .menu a:hover {
   text-decoration: underline;
 }
 
+/* HERO CONTENT */
 .hero-content {
   position: absolute;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
+  top: 195px;
+  left: 177px;
   z-index: 2;
   color: white;
-  text-align: left;
-  max-width: 600px;
+  width: 452px;
+  height: 217px;
+
 }
 
 .hero-content h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  width: 452px;
+  height: 72px;
 }
 
 .hero-content p {
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 100%;
   margin-bottom: 30px;
+  width: 403px;
+  height: 84px;
+  color: white;
+  top: 277px;
+  left: 177px;
 }
 
 .btn {
@@ -104,15 +108,18 @@ body {
   color: white;
   padding: 12px 30px;
   text-decoration: none;
-  font-size: 18px;
-  border-radius: 6px;
-  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 400px;
+  width: 80px;
+  height: 21px;
 }
 
 .btn:hover {
   background-color: #1976d2;
 }
 
+/* SCROLL ICON */
 .scroll-icon {
   position: absolute;
   bottom: 20px;
@@ -121,4 +128,116 @@ body {
   font-size: 32px;
   color: white;
   z-index: 2;
+}
+
+.kurslar__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px;
+  width: 1200px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+.kurslar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #F5F5F5;
+  border-radius: 16px;
+  padding: 20px;
+  width: 516px;
+  height: 669px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.kurslar__item:hover {
+  transform: translateY(-8px);
+}
+
+.kurslar__item img {
+  width: 297px;
+  height: 297px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  
+}
+
+.kurslar__title {
+  font-size: 40px;
+  margin: 10px 0;
+  color: black;
+  width: 187px;
+  height: 72px;
+}
+
+.kurslar__desc {
+  width: 392px;
+  height: 105px;
+  top: 2281px;
+  left: 232px;
+  font-size: 14px;
+  font-weight: 400;
+
+}
+
+/* USTOZLAR SECTION */
+.ustozlar {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+.ustozlar h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.ustozlar-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.teacher-card {
+  width: 236px;
+  height: 236px;
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.teacher-card img {
+  width: 236px;
+  height: 236px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.teacher-card h4 {
+  font-size: 24px;
+  margin-bottom: 6px;
+  width: 201px;
+  height: 36px;
+}
+
+.teacher-card p {
+  font-size: 14px;
+  color: black;
+  width: 191px;
+  height: 64px;
 }
